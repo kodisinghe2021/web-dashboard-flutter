@@ -172,9 +172,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                                         ],
                                       ),
                                     ),
-                                    SizedBox(
-                                      height: screenSize.height * .04,
-                                    ),
+                                    const Spacer(),
                                     Row(
                                       children: const [
                                         Padding(
@@ -189,6 +187,9 @@ class _HomeLayoutState extends State<HomeLayout> {
                                     )
                                   ],
                                 ),
+                              ),
+                              SizedBox(
+                                height: getScreenSize(context).height * .001,
                               ),
                               Padding(
                                   padding: const EdgeInsets.symmetric(
