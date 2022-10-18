@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_page_app/constance.dart';
-import 'package:web_page_app/widgets/custom_text/custom_text.dart';
+import 'package:web_page_app/widgets/custom_text/roboto_text.dart';
 
 class SimpleCard extends StatelessWidget {
   const SimpleCard({

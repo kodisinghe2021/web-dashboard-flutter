@@ -4,12 +4,9 @@ import 'package:web_page_app/constance.dart';
 
 class RoundadButton extends StatefulWidget {
   const RoundadButton({
-    this.maxWidth = 60,
-    this.maxHeight = 100,
     Key? key,
   }) : super(key: key);
-  final double maxWidth;
-  final double maxHeight;
+
   @override
   State<RoundadButton> createState() => _RoundadButtonState();
 }
@@ -20,8 +17,8 @@ class _RoundadButtonState extends State<RoundadButton> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: widget.maxHeight,
-      width: widget.maxWidth,
+      height: getScreenSize(context).width * .05,
+      width: getScreenSize(context).width * .05,
       child: Stack(
         children: [
           Align(
@@ -59,8 +56,8 @@ class _RoundadButtonState extends State<RoundadButton> {
                   opacity: mouseEnter ? .8 : .7,
                   child: Container(
                     //   duration: const Duration(milliseconds: 100),
-                    width: widget.maxWidth,
-                    height: widget.maxHeight - 30,
+                    width: getScreenSize(context).width * .05,
+                    height: getScreenSize(context).width * .05 - 30,
                     decoration: BoxDecoration(
                       border: Border.all(
                         width: 1,

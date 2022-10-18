@@ -2,7 +2,7 @@ import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 import 'package:web_page_app/constance.dart';
 import 'package:web_page_app/widgets/buttons/roundad_button.dart';
-import 'package:web_page_app/widgets/custom_text/custom_text.dart';
+import 'package:web_page_app/widgets/custom_text/roboto_text.dart';
 
 class NeoGlassCard extends StatelessWidget {
   const NeoGlassCard({super.key});
@@ -29,7 +29,7 @@ class NeoGlassCard extends StatelessWidget {
           FittedBox(
             child: FontRoboto(
               text: 'Add \nNew File',
-              size: 25,
+              size: 20,
               weight: FontWeight.w500,
             ),
           ),
