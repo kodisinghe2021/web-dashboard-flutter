@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_page_app/constance.dart';
+import 'package:web_page_app/constant.dart';
 
 class BarData {
   static int interval = 5;

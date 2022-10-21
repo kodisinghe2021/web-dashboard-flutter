@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_page_app/constance.dart';
+import 'package:web_page_app/constant.dart';
 import 'package:web_page_app/widgets/svg_helper/svg_helper.dart';
 
 class LogoInCard extends StatelessWidget {

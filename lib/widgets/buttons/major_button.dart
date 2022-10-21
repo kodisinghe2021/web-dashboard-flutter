@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:web_page_app/constant.dart';
+import 'package:web_page_app/constant_fonts.dart';
 
 class MajorButton extends StatefulWidget {
   MajorButton({
@@ -40,20 +42,20 @@ class _MajorButtonState extends State<MajorButton> {
           opacityI = 1;
         }),
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 100),
-          width: 200,
-          height: 50,
+          duration: const Duration(milliseconds: 50),
+          width: majorButtonWidth(context)[0],
+          height: majorButtonWidth(context)[1],
           decoration: BoxDecoration(
-            color: const Color(0xFFFAA5CC).withOpacity(opacityI),
+            color: kButton.withOpacity(opacityI),
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
               width: 3,
-              color: const Color(0xFFFFA5CC).withOpacity(.9),
+              color: kButton.withOpacity(.9),
             ),
             boxShadow: [
               if (isTapped)
                 BoxShadow(
-                  color: const Color(0xFFFFA5CC).withOpacity(.7),
+                  color: kButton.withOpacity(.7),
                   offset: const Offset(0, 10),
                   spreadRadius: 1,
                   blurRadius: 10,
@@ -61,29 +63,7 @@ class _MajorButtonState extends State<MajorButton> {
             ],
           ),
           child: Center(
-            child: Text(
-              widget.text,
-              style: const TextStyle(
-                  fontFamily: 'Roboto-Regular',
-                  fontSize: 16,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 2,
-                  shadows: [
-                    BoxShadow(
-                      color: Colors.black12,
-                      offset: Offset(5, 5),
-                      blurRadius: 3,
-                      spreadRadius: 1,
-                    ),
-                  ]
-                  //backgroundColor: Colors.black,
-                  // foreground: Paint()
-                  //   ..style = PaintingStyle.stroke
-                  //   ..strokeWidth = 1
-                  //   ..color = Colors.blue[700]!,
-                  ),
-            ),
+            child: buttonText(context, widget.text),
           ),
         ),
       ),

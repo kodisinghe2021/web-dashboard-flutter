@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_page_app/constance.dart';
-import 'package:web_page_app/widgets/custom_text/roboto_text.dart';
+import 'package:web_page_app/constant_fonts.dart';
 import 'package:web_page_app/widgets/svg_helper/svg_helper.dart';
 
 class MyAccountsCard extends StatelessWidget {
@@ -27,18 +26,9 @@ class MyAccountsCard extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              FontRoboto(
-                text: title,
-                weight: FontWeight.w800,
-                size: 18,
-              ),
+              rightSideCardHeading(title),
               const Spacer(),
-              FontRoboto(
-                text: text,
-                weight: FontWeight.w400,
-                color: kDisable,
-                size: 16,
-              ),
+              rightSideCardtext(text),
             ],
           ),
           const Spacer(flex: 3),

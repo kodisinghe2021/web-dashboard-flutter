@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_page_app/constance.dart';
-import 'package:web_page_app/widgets/custom_text/roboto_text.dart';
+import 'package:web_page_app/constant.dart';
+import 'package:web_page_app/constant_fonts.dart';
 import 'package:web_page_app/widgets/notification/circullar_notification_bubble.dart';
 
 class ProfileCard extends StatelessWidget {
@@ -10,9 +10,9 @@ class ProfileCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size screenSize = getScreenSize(context);
     return Row(
       children: [
+//* profile image
         Card(
           elevation: 10,
           shape: RoundedRectangleBorder(
@@ -23,32 +23,23 @@ class ProfileCard extends StatelessWidget {
             // child: Image.asset(
             //     'assets/images/avatar.png'),
             child: Image.network(
-              width: screenSize.width * .03,
-              height: screenSize.width * .03,
-              'https://picsum.photos/id/1/300/300',
+              width: getScreenSize(context).width * .03,
+              height: getScreenSize(context).width * .03,
+              'https://picsum.photos/id/1/60/60',
               fit: BoxFit.cover,
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              FontRoboto(
-                text: 'Jonathan',
-                weight: FontWeight.w800,
-                size: getScreenSize(context).width * .015,
-              ),
-              FontRoboto(
-                text: 'Jonathan@turu.com',
-                weight: FontWeight.w400,
-                size: getScreenSize(context).width * .01,
-              ),
-            ],
-          ),
+        const Spacer(flex: 1),
+//* name and email text column
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            rightSideCardHeading('Jonathan'),
+            rightSideCardtext('Jonathan@turu.com'),
+          ],
         ),
-        const Spacer(),
+        const Spacer(flex: 10),
         const CircullarNotificationBubble(),
       ],
     );

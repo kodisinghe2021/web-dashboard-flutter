@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_page_app/constance.dart';
+import 'package:web_page_app/constant.dart';
 
 class PortraitCard extends StatelessWidget {
   const PortraitCard({

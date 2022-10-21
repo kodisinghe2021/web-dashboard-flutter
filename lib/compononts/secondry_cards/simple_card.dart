@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_page_app/constance.dart';
+import 'package:web_page_app/constant.dart';
 import 'package:web_page_app/widgets/custom_text/roboto_text.dart';
 
 class SimpleCard extends StatelessWidget {
@@ -54,10 +54,8 @@ class SimpleCard extends StatelessWidget {
 //~ Upper logo
             Expanded(
                 flex: 6,
-                child: Container(
-                  child: FittedBox(
-                    child: logo,
-                  ),
+                child: FittedBox(
+                  child: logo,
                 )),
             const Spacer(
               flex: 2,
@@ -65,13 +63,11 @@ class SimpleCard extends StatelessWidget {
 //~ Header Text
             Expanded(
                 flex: 2,
-                child: Container(
-                  child: FittedBox(
-                    child: FontRoboto(
-                      text: textTop, //'Heart Rate',
-                      color: kBlack,
-                      weight: FontWeight.w500,
-                    ),
+                child: FittedBox(
+                  child: FontRoboto(
+                    text: textTop, //'Heart Rate',
+                    color: kBlack,
+                    weight: FontWeight.w500,
                   ),
                 )),
             const Spacer(
@@ -79,12 +75,10 @@ class SimpleCard extends StatelessWidget {
             ),
             Expanded(
                 flex: 2,
-                child: Container(
-                  child: FittedBox(
-                    child: FontRoboto(
-                      text: textMid, //'85 bpm',
-                      color: kvio,
-                    ),
+                child: FittedBox(
+                  child: FontRoboto(
+                    text: textMid, //'85 bpm',
+                    color: kvio,
                   ),
                 )),
             const Spacer(
@@ -92,28 +86,26 @@ class SimpleCard extends StatelessWidget {
             ),
             Expanded(
                 flex: 2,
-                child: Container(
-                  child: Row(
-                    children: [
-                      FittedBox(
-                        child: icon,
-                        // Icon(
-                        //   Icons.line_axis,
-                        //   color: kvio,
-                        //   size: 30,
-                        // ),
+                child: Row(
+                  children: [
+                    FittedBox(
+                      child: icon,
+                      // Icon(
+                      //   Icons.line_axis,
+                      //   color: kvio,
+                      //   size: 30,
+                      // ),
+                    ),
+                    const Spacer(flex: 1),
+                    FittedBox(
+                      child: FontRoboto(
+                        text: textBot, //'5% lesser',
+                        size: 22,
+                        weight: FontWeight.w300,
                       ),
-                      const Spacer(flex: 1),
-                      FittedBox(
-                        child: FontRoboto(
-                          text: textBot, //'5% lesser',
-                          size: 22,
-                          weight: FontWeight.w300,
-                        ),
-                      ),
-                      const Spacer(flex: 8),
-                    ],
-                  ),
+                    ),
+                    const Spacer(flex: 8),
+                  ],
                 )),
             const Spacer(
               flex: 2,

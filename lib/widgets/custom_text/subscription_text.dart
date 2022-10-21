@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_page_app/constance.dart';
+import 'package:web_page_app/constant.dart';
 import 'package:web_page_app/widgets/custom_text/roboto_text.dart';
 
 class SubCriptText extends StatelessWidget {

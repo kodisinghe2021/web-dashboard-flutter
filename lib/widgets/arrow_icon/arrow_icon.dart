@@ -1,10 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:web_page_app/constance.dart';
+import 'package:web_page_app/constant.dart';
 
-class ArrowIcon extends StatelessWidget {
-  const ArrowIcon({super.key});
+class Carousel extends StatelessWidget {
+  const Carousel({super.key});
 
   @override
   Widget build(BuildContext context) {

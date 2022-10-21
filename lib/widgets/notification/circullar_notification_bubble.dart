@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_page_app/constance.dart';
+import 'package:web_page_app/constant.dart';
 
 class CircullarNotificationBubble extends StatelessWidget {
   const CircullarNotificationBubble({
@@ -8,10 +8,9 @@ class CircullarNotificationBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size screenSize = getScreenSize(context);
     return Container(
-      width: screenSize.width * .03,
-      height: screenSize.width * .03,
+      width: getScreenSize(context).width * .03,
+      height: getScreenSize(context).width * .03,
       decoration: BoxDecoration(
         border: Border.all(
           width: 3,
@@ -30,8 +29,8 @@ class CircullarNotificationBubble extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: getScreenSize(context).height * .005,
-            right: getScreenSize(context).width * .005,
+            top: 12,
+            right: 15,
             child: Container(
               width: 7,
               height: 7,

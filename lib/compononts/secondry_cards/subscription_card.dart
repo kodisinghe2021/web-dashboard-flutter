@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_page_app/constance.dart';
-import 'package:web_page_app/widgets/custom_text/roboto_text.dart';
+import 'package:web_page_app/constant.dart';
+import 'package:web_page_app/constant_fonts.dart';
 
 class SubscriptionCard extends StatelessWidget {
   const SubscriptionCard({
@@ -23,7 +23,7 @@ class SubscriptionCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
       decoration: BoxDecoration(
           color: kBackGround,
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: commonBorderRadius,
           boxShadow: [
             BoxShadow(
               offset: const Offset(0, 1),
@@ -37,10 +37,10 @@ class SubscriptionCard extends StatelessWidget {
           Card(
             elevation: 10,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: commonBorderRadius,
             ),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: commonBorderRadius,
               // child: Image.asset(
               //     'assets/images/avatar.png'),
               child: Image.network(
@@ -56,33 +56,26 @@ class SubscriptionCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                FontRoboto(
-                  text: title,
-                  weight: FontWeight.w800,
-                  size: 18,
-                ),
-                FontRoboto(
-                  text: text,
-                  weight: FontWeight.w400,
-                  size: 14,
-                  color: kDisable,
-                ),
+                rightSideCardHeading(title),
+                rightSideCardtext(text),
               ],
             ),
           ),
           const Spacer(),
           Column(
             children: [
-              FontRoboto(
-                text: trailingTopText,
-                color: kOrange,
-                size: getScreenSize(context).width * .015,
-              ),
-              FontRoboto(
-                text: trailingBotText,
-                color: kDisable,
-                size: getScreenSize(context).width * .01,
-              ),
+              // FontRoboto(
+              //   text: trailingTopText,
+              //   color: kOrange,
+              //   size: getScreenSize(context).width * .015,
+              // ),
+              subscriptionCardTrailerTitle(trailingTopText),
+              subscriptionCardTrailerText(trailingBotText),
+              // FontRoboto(
+              //   text: trailingBotText,
+              //   color: kDisable,
+              //   size: getScreenSize(context).width * .01,
+              // ),
             ],
           )
         ],

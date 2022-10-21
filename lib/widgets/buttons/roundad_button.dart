@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
-import 'package:web_page_app/constance.dart';
+import 'package:web_page_app/constant.dart';
 
 class RoundadButton extends StatefulWidget {
   const RoundadButton({
