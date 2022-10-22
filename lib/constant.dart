@@ -31,7 +31,7 @@ const Color kOrange = Color(0xFFDE6F38);
 
 const EdgeInsets paddingSideCards = EdgeInsets.fromLTRB(10, 50, 10, 10);
 const EdgeInsets paddingCenterCard = EdgeInsets.fromLTRB(10, 20, 10, 10);
-const EdgeInsets paddingArrowCard = EdgeInsets.fromLTRB(0, 100, 10, 100);
+// //const EdgeInsets paddingArrowCard = EdgeInsets.fromLTRB(0, 100, 10, 100);
 
 //* Paddings
 
@@ -55,7 +55,9 @@ List<EdgeInsets> setPadding(BuildContext context) => <EdgeInsets>[
       EdgeInsets.symmetric(
         vertical: getScreenSize(context).height * .015,
         horizontal: getScreenSize(context).width * .02,
-      )
+      ),
+//^ 7 Drawer paddgin
+      const EdgeInsets.symmetric(vertical: 20, horizontal: 30)
     ];
 
 //* Border Radius
@@ -79,7 +81,7 @@ BoxShadow boxShadowMax = const BoxShadow(
   color: Color(0xFFA7A9AF),
 );
 //* buttons sizes
-List<double> majorButtonWidth(BuildContext context) => [
+List<double> majorButtonSizes(BuildContext context) => [
       getScreenSize(context).width * .14,
       getScreenSize(context).height * .06,
     ];

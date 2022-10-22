@@ -43,8 +43,8 @@ class _MajorButtonState extends State<MajorButton> {
         }),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 50),
-          width: majorButtonWidth(context)[0],
-          height: majorButtonWidth(context)[1],
+          width: majorButtonSizes(context)[0],
+          height: majorButtonSizes(context)[1],
           decoration: BoxDecoration(
             color: kButton.withOpacity(opacityI),
             borderRadius: BorderRadius.circular(8),

@@ -3,16 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:web_page_app/constant.dart';
 import 'package:web_page_app/widgets/custom_text/roboto_text.dart';
 
-Widget heading01(String text) => FontRoboto(
-      text: text,
-      color: kBlack,
-      size: 39,
+Widget heading01(String text) => FittedBox(
+      child: FontRoboto(
+        text: text,
+        color: kBlack,
+        size: 39,
+      ),
     );
-Widget heading02(String text) => FontRoboto(
-      text: text,
-      color: kBlack,
-      size: 22,
-      weight: FontWeight.w400,
+Widget heading02(String text) => FittedBox(
+      child: FontRoboto(
+        text: text,
+        color: kBlack,
+        size: 22,
+        weight: FontWeight.w400,
+      ),
     );
 Widget buttonText(BuildContext context, String text) => FontRoboto(
       text: text,
@@ -56,13 +60,11 @@ FittedBox rightSideCardtext(String text) => FittedBox(
         size: 16,
       ),
     );
-FittedBox rightSideCardHeading(String text) => FittedBox(
-      child: FontRoboto(
-        text: text,
-        weight: FontWeight.w600,
-        color: kBlack,
-        size: 18,
-      ),
+Widget rightSideCardHeading(String text) => FontRoboto(
+      text: text,
+      weight: FontWeight.w600,
+      color: kBlack,
+      size: 18,
     );
 
 FittedBox subscriptionCardTrailerTitle(String title) => FittedBox(

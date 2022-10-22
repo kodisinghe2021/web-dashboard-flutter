@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:web_page_app/const_functions.dart';
 import 'package:web_page_app/constant_fonts.dart';
-import 'package:web_page_app/widgets/svg_helper/svg_helper.dart';
 
 class MyAccountsCard extends StatelessWidget {
   const MyAccountsCard({

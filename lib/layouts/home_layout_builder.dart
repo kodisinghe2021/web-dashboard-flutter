@@ -1,15 +1,15 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:web_page_app/compononts/columns/left_col.dart';
+import 'package:web_page_app/compononts/drawer/cus_drawer.dart';
+import 'package:web_page_app/const_functions.dart';
 import 'package:web_page_app/constant.dart';
 import 'package:web_page_app/helpers/responsiveness.dart';
-import 'package:web_page_app/layouts/large_screen.dart';
-import 'package:web_page_app/layouts/medium_screen.dart';
-import 'package:web_page_app/layouts/mobile_screen.dart';
-import 'package:web_page_app/layouts/small_screen.dart';
+import 'package:web_page_app/screens/large_screen_size.dart';
+import 'package:web_page_app/screens/small_screen_size.dart';
+import 'package:web_page_app/screens/mobile_size.dart';
+import 'package:web_page_app/screens/tab_size.dart';
 import 'package:web_page_app/widgets/nav_bars/top_nav_bar.dart';
-import 'package:web_page_app/widgets/svg_helper/svg_helper.dart';
 
 class HomeLayoutBuilder extends StatefulWidget {
   const HomeLayoutBuilder({super.key});
@@ -42,7 +42,7 @@ class _HomeLayoutBuilderState extends State<HomeLayoutBuilder> {
 //^..........................................................//
       drawer: Drawer(
         width: getScreenSize(context).width * .4,
-        child: const LeftSideCol(),
+        child: const CustomDrawer(),
       ),
       //^..........................................................//
       body: Stack(
@@ -92,7 +92,7 @@ class _HomeLayoutBuilderState extends State<HomeLayoutBuilder> {
                         borderRadius: BorderRadius.circular(30)),
                     child: const ResponsiveWidget(
                       smallScreen: SmallScreen(),
-                      mediumScreen: MediumScreen(),
+                      tabScreen: TabScreen(),
                       largeScreen: LargeScreen(),
                       mobileScreen: MobileScreen(),
                     ),

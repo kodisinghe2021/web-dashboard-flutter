@@ -5,12 +5,15 @@ import 'package:web_page_app/constant_fonts.dart';
 import 'package:web_page_app/widgets/buttons/roundad_button.dart';
 
 class NeoGlassCard extends StatelessWidget {
-  const NeoGlassCard({super.key});
-
+  const NeoGlassCard({
+    super.key,
+    this.padding,
+    });
+  final EdgeInsets? padding;
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+      padding:padding?? const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
       decoration: BoxDecoration(
           gradient: const LinearGradient(
               begin: Alignment.topCenter,

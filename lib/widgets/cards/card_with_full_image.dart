@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:web_page_app/constant.dart';
 import 'package:web_page_app/widgets/custom_text/roboto_text.dart';
@@ -19,11 +18,16 @@ class CardWithFullImage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          const FontRoboto(
-            text: 'Upgrade to Pro for Unlimited Storage',
-            weight: FontWeight.w600,
-            size: 16,
-            color: kWhite,
+          const FittedBox(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: FontRoboto(
+                text: 'Upgrade to Pro for Unlimited Storage',
+                weight: FontWeight.w600,
+                size: 16,
+                color: kWhite,
+              ),
+            ),
           ),
           ClipRRect(
             borderRadius: commonBorderRadius,

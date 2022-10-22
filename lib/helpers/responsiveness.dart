@@ -1,43 +1,49 @@
 import 'package:flutter/material.dart';
 import 'package:web_page_app/constant.dart';
 
-const int smallScreenSize = 630;
-const int mediumScreenSize = 980;
-const int largeScreenSize = 1370;
+const int mobileScreenSize = 480;
+const int tabScreenSize = 990;
+const int smallScreenSize = 1296;
 
 class ResponsiveWidget extends StatelessWidget {
   const ResponsiveWidget({
     super.key,
     required this.smallScreen,
-    required this.mediumScreen,
+    required this.tabScreen,
     required this.largeScreen,
     required this.mobileScreen,
   });
 //^ ---------------------------------------------------------------//
   final Widget largeScreen;
-  final Widget mediumScreen;
+  final Widget tabScreen;
   final Widget smallScreen;
   final Widget mobileScreen;
 //^ ---------------------------------------------------------------//
+  static bool isMobileScreen(BuildContext context) =>
+      getScreenSize(context).width <= mobileScreenSize;
+
+  static bool isTabScreen(BuildContext context) =>
+      getScreenSize(context).width < mobileScreenSize &&
+      getScreenSize(context).width >= tabScreenSize;
+
   static bool isSmallScreen(BuildContext context) =>
-      getScreenSize(context).width <= smallScreenSize;
-  static bool isMediumScreen(BuildContext context) =>
-      getScreenSize(context).width <= mediumScreenSize &&
-      getScreenSize(context).width > smallScreenSize;
+      getScreenSize(context).width < tabScreenSize &&
+      getScreenSize(context).width >= smallScreenSize;
+
   static bool isLargeScreen(BuildContext context) =>
-      getScreenSize(context).width > largeScreenSize;
+      getScreenSize(context).width > smallScreenSize;
 //^ ---------------------------------------------------------------//
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, boxConstraints) {
         double width = boxConstraints.maxWidth;
-        if (width <= smallScreenSize) {
+        if (width <= mobileScreenSize) {
           return mobileScreen;
-        } else if (width > smallScreenSize && width <= mediumScreenSize) {
+        } else if (mobileScreenSize < width && width <= tabScreenSize) {
+          return tabScreen;
+        } else if (tabScreenSize < width && width <= smallScreenSize) {
           return smallScreen;
-        } else if (width > mediumScreenSize && width <= largeScreenSize) {
-          return mediumScreen;
         } else {
           return largeScreen;
         }

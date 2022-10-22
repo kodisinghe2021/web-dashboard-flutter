@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:web_page_app/constant.dart';
 import 'package:web_page_app/constant_fonts.dart';
 import 'package:web_page_app/widgets/cards/card_items/portrait_card.dart';
@@ -100,4 +101,9 @@ Widget majorCard(
       ],
     );
 
-//* Middle coloumn second row -Middle major card-       //
+//* make svg image visible       //
+Widget showSVG(String assetName) => SvgPicture.asset(
+      assetName,
+      alignment: Alignment.center,
+      fit: BoxFit.cover,
+    );
